@@ -8,10 +8,29 @@
 	"license-name": "CC0-1.0",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"ValidSkinNames": {
-		"blank": "Blank"
+		"blank": {
+			"class": "SkinBlank",
+			"args": [ {
+				"name": "blank",
+				"responsive": true,
+				"templateDirectory": "skins/Blank/templates",
+				"styles": [
+					"skins.blank"
+				],
+				"messages": [
+					"sitetitle",
+					"search",
+					"tagline",
+					"navigation-heading"
+				],
+				"scripts": [
+					"skins.blank.js"
+				]
+			} ]
+		}
 	},
 	"MessagesDirs": {
 		"Blank": [
@@ -21,10 +40,14 @@
 	"ResourceModules": {
 		"skins.blank": {
 			"class": "ResourceLoaderSkinModule",
+			"features": [
+				"normalize",
+				"elements",
+				"content",
+				"interface",
+				"logo"
+			],
 			"styles": {
-				"resources/libraries/normalise.css": {
-					"media": "screen"
-				},
 				"resources/screen-common.less": {
 					"media": "screen"
 				},
