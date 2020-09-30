@@ -1,0 +1,62 @@
+{
+	"name": "Blank",
+	"version": "1.0",
+	"author": "...",
+	"url": "https://github.com/TheNintendofan1209/Blank-Mediawiki",
+	"descriptionmsg": "blank-desc",
+	"namemsg": "skinname-blank",
+	"license-name": "CC0-1.0",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"ValidSkinNames": {
+		"blank": "Blank"
+	},
+	"MessagesDirs": {
+		"Blank": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.blank": {
+			"class": "ResourceLoaderSkinModule",
+			"styles": {
+				"resources/libraries/normalise.css": {
+					"media": "screen"
+				},
+				"resources/screen-common.less": {
+					"media": "screen"
+				},
+				"resources/screen-desktop.less": {
+					"media": "screen and (min-width: 751px)"
+				},
+				"resources/screen-mobile.less": {
+					"media": "screen and (max-width: 750px)"
+				},
+				"resources/print.css": {
+					"media": "print"
+				}
+			}
+		},
+		"skins.blank.js": {
+			"scripts": [
+				"resources/main.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Blank"
+	},
+	"ResourceModuleSkinStyles": {
+		"blank": {
+			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
+		}
+	},
+	"AutoloadClasses": {
+		"SkinBlank": "includes/SkinBlank.php",
+		"BlankTemplate": "includes/BlankTemplate.php"
+	},
+	"manifest_version": 1
+}
